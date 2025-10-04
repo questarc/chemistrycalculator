@@ -60,8 +60,61 @@ data = {
 df = pd.DataFrame(data)
 st.table(df)
 
-st.markdown("**Periodic Table with Electron Shells**")
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Periodic_Table_of_Elements_showing_Electron_Shells.svg/800px-Periodic_Table_of_Elements_showing_Electron_Shells.svg.png")
+st.subheader("Periodic Table with Electron Shells")
+st.markdown("Below is a simplified periodic table showing the first 20 elements with their electron configurations.")
+
+# CSS for periodic table grid
+st.markdown("""
+<style>
+    .element-box {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        min-height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .s-block { background-color: #d1e7dd; }
+    .p-block { background-color: #f8d7da; }
+    .noble-gas { background-color: #d4edda; }
+    .empty-box { background-color: #ffffff; border: none; }
+</style>
+""", unsafe_allow_html=True)
+
+# Create a simplified periodic table layout for elements 1-20
+periodic_table = [
+    ["H", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "He"],
+    ["Li", "Be", "", "", "", "", "", "", "", "", "", "", "B", "C", "N", "O", "F", "Ne"],
+    ["Na", "Mg", "", "", "", "", "", "", "", "", "", "", "Al", "Si", "P", "S", "Cl", "Ar"],
+    ["K", "Ca"]
+]
+
+# Display periodic table using Streamlit columns
+for row in periodic_table:
+    cols = st.columns(18)  # 18 columns to match periodic table width
+    for idx, element in enumerate(row):
+        if element:
+            element_data = df[df["Element"] == element]
+            config = element_data["Configuration"].iloc[0]
+            atomic_num = element_data["Atomic Number"].iloc[0]
+            block_class = "s-block" if element in ["H", "He", "Li", "Be", "Na", "Mg", "K", "Ca"] else "p-block"
+            if element in ["He", "Ne", "Ar"]:
+                block_class = "noble-gas"
+            cols[idx].markdown(
+                f"""
+                <div class="element-box {block_class}">
+                    <strong>{element}</strong><br>
+                    {atomic_num}<br>
+                    {config}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        else:
+            cols[idx].markdown('<div class="empty-box"></div>', unsafe_allow_html=True)
 
 st.subheader("Interactive Calculator")
 atomic_number = st.number_input("Enter atomic number (1-20):", min_value=1, max_value=20, step=1)
