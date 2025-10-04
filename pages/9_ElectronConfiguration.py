@@ -45,7 +45,7 @@ st.markdown("Below is a table showing electron configurations for all 118 known 
 data = {
     "Atomic Number": list(range(1, 119)),
     "Element": [
-        "H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", 
+        "H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne",
         "Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar", "K", "Ca",
         "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn",
         "Ga", "Ge", "As", "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr",
@@ -59,48 +59,48 @@ data = {
         "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"
     ],
     "Configuration": [
-        "1s¹", "1s²", "1s² 2s¹", "1s² 2s²", "1s² 2s² 2p¹", "1s² 2s² 2p²", "1s² 2s² 2p³", 
-        "1s² 2s² 2p⁴", "1s² 2s² 2p⁵", "1s² 2s² 2p⁶", "1s² 2s² 2p⁶ 3s¹", "1s² 2s² 2p⁶ 3s²", 
-        "1s² 2s² 2p⁶ 3s² 3p¹", "1s² 2s² 2p⁶ 3s² 3p²", "1s² 2s² 2p⁶ 3s² 3p³", "1s² 2s² 2p⁶ 3s² 3p⁴", 
+        "1s¹", "1s²", "1s² 2s¹", "1s² 2s²", "1s² 2s² 2p¹", "1s² 2s² 2p²", "1s² 2s² 2p³",
+        "1s² 2s² 2p⁴", "1s² 2s² 2p⁵", "1s² 2s² 2p⁶", "1s² 2s² 2p⁶ 3s¹", "1s² 2s² 2p⁶ 3s²",
+        "1s² 2s² 2p⁶ 3s² 3p¹", "1s² 2s² 2p⁶ 3s² 3p²", "1s² 2s² 2p⁶ 3s² 3p³", "1s² 2s² 2p⁶ 3s² 3p⁴",
         "1s² 2s² 2p⁶ 3s² 3p⁵", "1s² 2s² 2p⁶ 3s² 3p⁶", "[Ar] 4s¹", "[Ar] 4s²",
-        "[Ar] 3d¹ 4s²", "[Ar] 3d² 4s²", "[Ar] 3d³ 4s²", "[Ar] 3d⁵ 4s¹", "[Ar] 3d⁵ 4s²", 
+        "[Ar] 3d¹ 4s²", "[Ar] 3d² 4s²", "[Ar] 3d³ 4s²", "[Ar] 3d⁵ 4s¹", "[Ar] 3d⁵ 4s²",
         "[Ar] 3d⁶ 4s²", "[Ar] 3d⁷ 4s²", "[Ar] 3d⁸ 4s²", "[Ar] 3d¹⁰ 4s¹", "[Ar] 3d¹⁰ 4s²",
-        "[Ar] 3d¹⁰ 4s² 4p¹", "[Ar] 3d¹⁰ 4s² 4p²", "[Ar] 3d¹⁰ 4s² 4p³", "[Ar] 3d¹⁰ 4s² 4p⁴", 
-        "[Ar] 3d¹⁰ 4s² 4p⁵", "[Ar] 3d¹⁰ 4s² 4p⁶", "[Kr] 5s¹", "[Kr] 5s²", "[Kr] 4d¹ 5s²", 
-        "[Kr] 4d² 5s²", "[Kr] 4d⁴ 5s¹", "[Kr] 4d⁵ 5s¹", "[Kr] 4d⁵ 5s²", "[Kr] 4d⁷ 5s¹", 
-        "[Kr] 4d⁸ 5s¹", "[Kr] 4d¹⁰", "[Kr] 4d¹⁰ 5s¹", "[Kr] 4d¹⁰ 5s²", "[Kr] 4d¹⁰ 5s² 5p¹", 
-        "[Kr] 4d¹⁰ 5s² 5p²", "[Kr] 4d¹⁰ 5s² 5p³", "[Kr] 4d¹⁰ 5s² 5p⁴", "[Kr] 4d¹⁰ 5s² 5p⁵", 
+        "[Ar] 3d¹⁰ 4s² 4p¹", "[Ar] 3d¹⁰ 4s² 4p²", "[Ar] 3d¹⁰ 4s² 4p³", "[Ar] 3d¹⁰ 4s² 4p⁴",
+        "[Ar] 3d¹⁰ 4s² 4p⁵", "[Ar] 3d¹⁰ 4s² 4p⁶", "[Kr] 5s¹", "[Kr] 5s²", "[Kr] 4d¹ 5s²",
+        "[Kr] 4d² 5s²", "[Kr] 4d⁴ 5s¹", "[Kr] 4d⁵ 5s¹", "[Kr] 4d⁵ 5s²", "[Kr] 4d⁷ 5s¹",
+        "[Kr] 4d⁸ 5s¹", "[Kr] 4d¹⁰", "[Kr] 4d¹⁰ 5s¹", "[Kr] 4d¹⁰ 5s²", "[Kr] 4d¹⁰ 5s² 5p¹",
+        "[Kr] 4d¹⁰ 5s² 5p²", "[Kr] 4d¹⁰ 5s² 5p³", "[Kr] 4d¹⁰ 5s² 5p⁴", "[Kr] 4d¹⁰ 5s² 5p⁵",
         "[Kr] 4d¹⁰ 5s² 5p⁶", "[Xe] 6s¹", "[Xe] 6s²", "[Xe] 5d¹ 6s²", "[Xe] 4f¹ 5d¹ 6s²",
-        "[Xe] 4f² 6s²", "[Xe] 4f³ 6s²", "[Xe] 4f⁴ 6s²", "[Xe] 4f⁵ 6s²", "[Xe] 4f⁶ 6s²", 
-        "[Xe] 4f⁷ 6s²", "[Xe] 4f⁷ 5d¹ 6s²", "[Xe] 4f⁹ 6s²", "[Xe] 4f¹⁰ 6s²", "[Xe] 4f¹¹ 6s²", 
-        "[Xe] 4f¹² 6s²", "[Xe] 4f¹³ 6s²", "[Xe] 4f¹⁴ 6s²", "[Xe] 4f¹⁴ 5d¹ 6s²", 
-        "[Xe] 4f¹⁴ 5d² 6s²", "[Xe] 4f¹⁴ 5d³ 6s²", "[Xe] 4f¹⁴ 5d⁴ 6s²", "[Xe] 4f¹⁴ 5d⁵ 6s²", 
-        "[Xe] 4f¹⁴ 5d⁶ 6s²", "[Xe] 4f¹⁴ 5d⁷ 6s²", "[Xe] 4f¹⁴ 5d⁹ 6s¹", "[Xe] 4f¹⁴ 5d¹⁰ 6s¹", 
-        "[Xe] 4f¹⁴ 5d¹⁰ 6s²", "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p¹", "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p²", 
-        "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p³", "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁴", "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁵", 
+        "[Xe] 4f² 6s²", "[Xe] 4f³ 6s²", "[Xe] 4f⁴ 6s²", "[Xe] 4f⁵ 6s²", "[Xe] 4f⁶ 6s²",
+        "[Xe] 4f⁷ 6s²", "[Xe] 4f⁷ 5d¹ 6s²", "[Xe] 4f⁹ 6s²", "[Xe] 4f¹⁰ 6s²", "[Xe] 4f¹¹ 6s²",
+        "[Xe] 4f¹² 6s²", "[Xe] 4f¹³ 6s²", "[Xe] 4f¹⁴ 6s²", "[Xe] 4f¹⁴ 5d¹ 6s²",
+        "[Xe] 4f¹⁴ 5d² 6s²", "[Xe] 4f¹⁴ 5d³ 6s²", "[Xe] 4f¹⁴ 5d⁴ 6s²", "[Xe] 4f¹⁴ 5d⁵ 6s²",
+        "[Xe] 4f¹⁴ 5d⁶ 6s²", "[Xe] 4f¹⁴ 5d⁷ 6s²", "[Xe] 4f¹⁴ 5d⁹ 6s¹", "[Xe] 4f¹⁴ 5d¹⁰ 6s¹",
+        "[Xe] 4f¹⁴ 5d¹⁰ 6s²", "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p¹", "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p²",
+        "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p³", "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁴", "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁵",
         "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶", "[Rn] 7s¹", "[Rn] 7s²", "[Rn] 6d¹ 7s²", "[Rn] 6d² 7s²",
-        "[Rn] 5f² 6d¹ 7s²", "[Rn] 5f³ 6d¹ 7s²", "[Rn] 5f⁴ 6d¹ 7s²", "[Rn] 5f⁶ 7s²", 
-        "[Rn] 5f⁷ 7s²", "[Rn] 5f⁷ 6d¹ 7s²", "[Rn] 5f⁹ 7s²", "[Rn] 5f¹⁰ 7s²", "[Rn] 5f¹¹ 7s²", 
-        "[Rn] 5f¹² 7s²", "[Rn] 5f¹³ 7s²", "[Rn] 5f¹⁴ 7s²", "[Rn] 5f¹⁴ 6d¹ 7s²", 
-        "[Rn] 5f¹⁴ 6d² 7s²", "[Rn] 5f¹⁴ 6d³ 7s²", "[Rn] 5f¹⁴ 6d⁴ 7s²", "[Rn] 5f¹⁴ 6d⁵ 7s²", 
-        "[Rn] 5f¹⁴ 6d⁶ 7s²", "[Rn] 5f¹⁴ 6d⁷ 7s²", "[Rn] 5f¹⁴ 6d⁹ 7s¹", "[Rn] 5f¹⁴ 6d¹⁰ 7s¹", 
-        "[Rn] 5f¹⁴ 6d¹⁰ 7s²", "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p¹", "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p²", 
-        "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p³", "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁴", "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁵", 
+        "[Rn] 5f² 6d¹ 7s²", "[Rn] 5f³ 6d¹ 7s²", "[Rn] 5f⁴ 6d¹ 7s²", "[Rn] 5f⁶ 7s²",
+        "[Rn] 5f⁷ 7s²", "[Rn] 5f⁷ 6d¹ 7s²", "[Rn] 5f⁹ 7s²", "[Rn] 5f¹⁰ 7s²", "[Rn] 5f¹¹ 7s²",
+        "[Rn] 5f¹² 7s²", "[Rn] 5f¹³ 7s²", "[Rn] 5f¹⁴ 7s²", "[Rn] 5f¹⁴ 6d¹ 7s²",
+        "[Rn] 5f¹⁴ 6d² 7s²", "[Rn] 5f¹⁴ 6d³ 7s²", "[Rn] 5f¹⁴ 6d⁴ 7s²", "[Rn] 5f¹⁴ 6d⁵ 7s²",
+        "[Rn] 5f¹⁴ 6d⁶ 7s²", "[Rn] 5f¹⁴ 6d⁷ 7s²", "[Rn] 5f¹⁴ 6d⁹ 7s¹", "[Rn] 5f¹⁴ 6d¹⁰ 7s¹",
+        "[Rn] 5f¹⁴ 6d¹⁰ 7s²", "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p¹", "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p²",
+        "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p³", "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁴", "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁵",
         "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁶"
     ],
     "Valence Electrons": [
-        1, 2, 1, 2, 3, 4, 5, 6, 7, 8,  # H-Ne (Group 1, 2, 13-18)
-        1, 2, 3, 4, 5, 6, 7, 8, 1, 2,  # Na-Ca (Group 1, 2, 13-18)
-        3, 4, 5, 6, 7, 8, 9, 10, 11, 12,  # Sc-Zn (Group 3-12, transition metals)
-        3, 4, 5, 6, 7, 8, 1, 2, 3, 4,  # Ga-Zr (Group 13-18, 3-4)
-        5, 6, 7, 8, 9, 10, 11, 12, 3, 4,  # Nb-Sn (Group 5-12, 13-14)
-        5, 6, 7, 8, 1, 2, 3, 4, 5, 6,  # Sb-Nd (Group 15-18, lanthanides)
-        7, 8, 9, 10, 11, 12, 13, 14, 15, 16,  # Pm-Yb (lanthanides)
-        3, 4, 5, 6, 7, 8, 9, 10, 11, 12,  # Lu-Hg (Group 3-12)
-        3, 4, 5, 6, 7, 8, 1, 2, 3, 4,  # Tl-Th (Group 13-18, actinides)
-        5, 6, 7, 8, 9, 10, 11, 12, 13, 14,  # Pa-Fm (actinides)
-        15, 16, 3, 4, 5, 6, 7, 8, 9, 10,  # Md-Ds (actinides, Group 3-10)
-        11, 12, 3, 4, 5, 6, 7, 8  # Rg-Og (Group 11-18)
+        1, 2, 1, 2, 3, 4, 5, 6, 7, 8,  # H-Ne (Groups 1, 2, 13-18)
+        1, 2, 3, 4, 5, 6, 7, 8, 1, 2,  # Na-Ca (Groups 1, 2, 13-18)
+        2, 2, 2, 1, 2, 2, 2, 2, 1, 2,  # Sc-Zn (Groups 3-12, transition metals, simplified)
+        3, 4, 5, 6, 7, 8, 1, 2, 2, 2,  # Ga-Zr (Groups 13-18, 3-4)
+        1, 1, 2, 1, 1, 0, 1, 2, 3, 4,  # Nb-Sn (Groups 5-12, 13-14)
+        5, 6, 7, 8, 1, 2, 2, 2, 2, 2,  # Sb-Nd (Groups 15-18, lanthanides)
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2,  # Pm-Yb (lanthanides, simplified)
+        2, 2, 2, 2, 2, 2, 2, 1, 1, 2,  # Lu-Hg (Groups 3-12)
+        3, 4, 5, 6, 7, 8, 1, 2, 2, 2,  # Tl-Th (Groups 13-18, actinides)
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2,  # Pa-Fm (actinides, simplified)
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2,  # Md-Ds (actinides, Groups 3-10)
+        1, 2, 3, 4, 5, 6, 7, 8  # Rg-Og (Groups 11-18)
     ]
 }
 
