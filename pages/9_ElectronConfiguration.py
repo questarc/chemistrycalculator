@@ -38,15 +38,10 @@ st.markdown("""
 
 st.markdown("**Example of Hund’s Rule**: For oxygen (1s² 2s² 2p⁴), the 2p subshell has one electron in each of three orbitals before pairing.")
 
-col1, col2 = st.columns(2)
-with col1:
-    st.markdown("**Bohr Model of Hydrogen (1s¹)**")
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/1_H_Bohr_model.png/800px-1_H_Bohr_model.png")
-with col2:
-    st.markdown("**Aufbau Principle: Order of Filling**")
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Aufbau_Principle.png/800px-Aufbau_Principle.png")
+st.subheader("Electron Configurations for Elements")
+st.markdown("Below is a table showing electron configurations for the first 20 elements, commonly covered in the 10th-grade syllabus. Configurations for all 118 elements follow the Aufbau principle, with exceptions for certain d- and f-block elements (e.g., Cr: [Ar] 3d⁵ 4s¹, Cu: [Ar] 3d¹⁰ 4s¹).")
 
-st.subheader("Electron Configurations for First 20 Elements")
+# Data for first 20 elements
 data = {
     "Atomic Number": list(range(1, 21)),
     "Element": ["H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", 
@@ -57,64 +52,18 @@ data = {
                       "1s² 2s² 2p⁶ 3s² 3p⁵", "1s² 2s² 2p⁶ 3s² 3p⁶", "[Ar] 4s¹", "[Ar] 4s²"],
     "Valence Electrons": [1, 2, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2]
 }
+
+# Note for remaining elements
+st.markdown("""
+*Note*: For elements 21–118 (Scandium to Oganesson), electron configurations include d- and f-block orbitals. For example:  
+- Scandium (Z=21): [Ar] 3d¹ 4s²  
+- Krypton (Z=36): [Ar] 3d¹⁰ 4s² 4p⁶  
+- Uranium (Z=92): [Rn] 5f³ 6d¹ 7s²  
+Due to space constraints, the table below lists the first 20 elements. Full configurations for all 118 elements can be derived using the Aufbau principle, accounting for exceptions in transition metals and lanthanides/actinides.
+""")
+
 df = pd.DataFrame(data)
 st.table(df)
-
-st.subheader("Periodic Table with Electron Shells")
-st.markdown("Below is a simplified periodic table showing the first 20 elements with their electron configurations.")
-
-# CSS for periodic table grid
-st.markdown("""
-<style>
-    .element-box {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: center;
-        background-color: #f9f9f9;
-        border-radius: 5px;
-        min-height: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .s-block { background-color: #d1e7dd; }
-    .p-block { background-color: #f8d7da; }
-    .noble-gas { background-color: #d4edda; }
-    .empty-box { background-color: #ffffff; border: none; }
-</style>
-""", unsafe_allow_html=True)
-
-# Create a simplified periodic table layout for elements 1-20
-periodic_table = [
-    ["H", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "He"],
-    ["Li", "Be", "", "", "", "", "", "", "", "", "", "", "B", "C", "N", "O", "F", "Ne"],
-    ["Na", "Mg", "", "", "", "", "", "", "", "", "", "", "Al", "Si", "P", "S", "Cl", "Ar"],
-    ["K", "Ca"]
-]
-
-# Display periodic table using Streamlit columns
-for row in periodic_table:
-    cols = st.columns(18)  # 18 columns to match periodic table width
-    for idx, element in enumerate(row):
-        if element:
-            element_data = df[df["Element"] == element]
-            config = element_data["Configuration"].iloc[0]
-            atomic_num = element_data["Atomic Number"].iloc[0]
-            block_class = "s-block" if element in ["H", "He", "Li", "Be", "Na", "Mg", "K", "Ca"] else "p-block"
-            if element in ["He", "Ne", "Ar"]:
-                block_class = "noble-gas"
-            cols[idx].markdown(
-                f"""
-                <div class="element-box {block_class}">
-                    <strong>{element}</strong><br>
-                    {atomic_num}<br>
-                    {config}
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-        else:
-            cols[idx].markdown('<div class="empty-box"></div>', unsafe_allow_html=True)
 
 st.subheader("Interactive Calculator")
 atomic_number = st.number_input("Enter atomic number (1-20):", min_value=1, max_value=20, step=1)
@@ -123,3 +72,4 @@ if st.button("Show Electron Configuration"):
     config = df[df["Atomic Number"] == atomic_number]["Configuration"].iloc[0]
     valence = df[df["Atomic Number"] == atomic_number]["Valence Electrons"].iloc[0]
     st.success(f"✅ Element: **{element}** | Configuration: **{config}** | Valence Electrons: **{valence}**")
+st.markdown("For elements beyond 20, configurations can be computed using the Aufbau principle or referenced from standard periodic table resources.")
