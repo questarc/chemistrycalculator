@@ -1,17 +1,17 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Chemistry Calculator", layout="wide")
+#st.set_page_config(page_title="Chemistry Calculator", layout="wide")
 
-st.sidebar.title("🧪 Chemistry Topics")
-topic = st.sidebar.selectbox("Select a topic:", ["Welcome", "Introduction to Electron Configurations"])
+#st.sidebar.title("🧪 Chemistry Topics")
+#topic = st.sidebar.selectbox("Select a topic:", ["Welcome", "Introduction to Electron Configurations"])
 
-if topic == "Welcome":
-    st.markdown("""
-    # Welcome to the Chemistry Calculator App!
-    This tool helps 10th graders learn and practice key chemistry calculations interactively.
-    """)
-elif topic == "Introduction to Electron Configurations":
+#if topic == "Welcome":
+#    st.markdown("""
+#    # Welcome to the Chemistry Calculator App!
+#    This tool helps 10th graders learn and practice key chemistry calculations interactively.
+#    """)
+#elif topic == "Introduction to Electron Configurations":
     st.title("🧲 Introduction to Electron Configurations")
     
     st.markdown("""
@@ -30,8 +30,8 @@ elif topic == "Introduction to Electron Configurations":
     
     col1, col2 = st.columns(2)
     with col1:
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/1_H_Bohr_model.png/800px-1_H_Bohr_model.png", 
-                 caption="Bohr Model of Hydrogen Atom (K shell with 1 electron)")
+        st.markdown("**Bohr Model of Hydrogen Atom (K shell with 1 electron)**")
+        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/1_H_Bohr_model.png/800px-1_H_Bohr_model.png")
     with col2:
         st.markdown("""
         ### Key Concepts:
@@ -48,8 +48,8 @@ elif topic == "Introduction to Electron Configurations":
     - Sodium (Na, Z=11): 2 in K, 8 in L, 1 in M → Configuration: 2, 8, 1
     """)
     
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Aufbau_Principle.png/800px-Aufbau_Principle.png", 
-             caption="Simplified Aufbau Principle: Order of Filling Shells and Subshells (Note: Class 10 focuses on main shells)")
+    st.markdown("**Simplified Aufbau Principle: Order of Filling Shells and Subshells**")
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Aufbau_Principle.png/800px-Aufbau_Principle.png")
     
     st.subheader("Electron Configurations for First 20 Elements")
     data = {
@@ -68,8 +68,7 @@ elif topic == "Introduction to Electron Configurations":
     ### Visual: Periodic Table with Electron Shells
     The image below shows the periodic table highlighting the electron shells for elements.
     """)
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Periodic_Table_of_Elements_showing_Electron_Shells.svg/1200px-Periodic_Table_of_Elements_showing_Electron_Shells.svg.png", 
-             caption="Periodic Table Showing Electron Shell Configurations")
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Periodic_Table_of_Elements_showing_Electron_Shells.svg/1200px-Periodic_Table_of_Elements_showing_Electron_Shells.svg.png")
     
     st.markdown("""
     ### Quick Practice
